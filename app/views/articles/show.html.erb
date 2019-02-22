@@ -1,7 +1,9 @@
 <h1>Article</h1>
-<p><%= time_ago_in_words(@article.created_at)%> </p>
+<p>created <%= time_ago_in_words(@article.created_at)%> ago</p>
 
 <h3><%= @article.title%></h3>
 <p><%= @article.description%></p>
 
 <%= link_to 'Edit article', edit_article_path(@article)%>
+<br>
+<%= link_to 'Back to articles', articles_path%>

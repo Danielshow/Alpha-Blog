@@ -30,8 +30,9 @@ class ArticlesController < ApplicationController
       render 'edit'
     end
   end
+
   def index
-    @article = Article.all
+    @articles = Article.all
   end
 
   private

@@ -1,0 +1,13 @@
+<%= link_to 'Create New Article', new_article_path %>
+
+<h1> All Articles </h1>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <h1><%= link_to article.title, article_path(article) %></h1>
+      <p>created <%= time_ago_in_words(article.created_at) %> ago</p>
+
+      <p><%= article.description%></p>
+    </li>
+  <%end%>
+</ul>
