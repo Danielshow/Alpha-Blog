@@ -1,0 +1,10 @@
+<% if @article.errors.any?%>
+  <h3>Some errors prevent the articles from creating: </h3>
+  <ul>
+    <% @article.errors.full_messages.each do |message| %>
+      <li>
+        <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
