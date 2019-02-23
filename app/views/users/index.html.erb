@@ -7,12 +7,28 @@
         <%= gravatar_for user%>
       </div>
       <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4"><%= user.username%><i class="material-icons right">more_vert</i></span>
+        <span class="card-title activator grey-text text-darken-4">
+          <% if logged_in? and current_user == user %>
+            You
+          <% else %>
+            <%= user.username%>
+          <%end%>
+          <i class="material-icons right">more_vert</i>
+        </span>
         <p><%= link_to 'My Profile', user_path(user)%></p>
         <p><%= pluralize(user.articles.count, 'article') if user.articles.count > 0 %></p>
+        <% if logged_in? and current_user.admin? %>
+          <%= link_to 'Delete this user', user_path(user), method: :delete, data: {confirm: 'Are you sure you want to delete this user?'}, class: "blue lighten-2 btn-small waves-effect  waves-block waves-light"%>
+        <% end %>
       </div>
       <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4"><%= user.username%><i class="material-icons right">close</i></span>
+        <span class="card-title grey-text text-darken-4">
+          <% if logged_in? and current_user == user %>
+            You
+          <% else %>
+            <%= user.username%>
+          <%end%>
+          <i class="material-icons right">close</i></span>
         <p><%= user.about%></p>
       </div>
     </div>

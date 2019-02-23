@@ -7,7 +7,7 @@
         <li><%= link_to 'Writers', users_path %></li>
         <%if logged_in? %>
           <li><%= link_to 'New Article', new_article_path%></li>
-          <li><%= link_to 'Profile', user_path(current_user)%> </li>
+          <li><%= link_to "Profile #{'Admin' if current_user.admin?}" , user_path(current_user)%> </li>
           <li><%= link_to 'Logout', logout_path, method: :delete %></li>
         <% else %>
           <li><%= link_to 'Signup', signup_path %></li>
