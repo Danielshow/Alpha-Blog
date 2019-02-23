@@ -1,4 +1,5 @@
 <h3>All Bloggers </h3>
+<%= will_paginate @users%>
 <div class="users">
   <% @users.each do |user|%>
     <div class="card card-user">
@@ -17,3 +18,5 @@
     </div>
   <% end%>
 </div>
+
+<%= will_paginate @users%>

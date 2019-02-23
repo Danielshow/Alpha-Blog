@@ -39,3 +39,7 @@ textarea.materialize-textarea{height: 20rem;}
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.pagination li.active a {
+  color: #fff;
+}
