@@ -1,0 +1,23 @@
+@import "materialize";
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.hero {
+  width: 100%;
+  background-image: asset-data-url('undraw_blogging_vpvv.svg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-color: hsla(358, 78%, 68%, 0.379);
+  min-height: 50vh;
+}
+
+.footer {
+  bottom: 0;
+}

@@ -6,9 +6,10 @@
   </p>
 
   <p>
-    <%= f.label :description%><br>
-    <%= f.text_area :description %>  
+    <%= f.label :description%>
+     <i class="material-icons prefix">mode_edit</i>
+    <%= f.text_area :description, class: "materialize-textarea" %>  
   </p>
 
-  <%= f.submit%>
+  <%= f.submit "Create Article", class: "btn pink"%>
 <%end%>

@@ -1,8 +1,9 @@
 <% if @article.errors.any?%>
-  <h3>Some errors prevent the articles from creating: </h3>
-  <ul>
+  <h5>Some errors prevent the articles from creating: </h5>
+  <ul class="red-text text-darken-2">
     <% @article.errors.full_messages.each do |message| %>
       <li>
+        <i class="material-icons red-text text-darken-2">error</i>
         <%= message %>
       </li>
     <% end %>
