@@ -1,5 +1,5 @@
 <% if @article.errors.any?%>
-  <h5>Some errors prevent the articles from creating: </h5>
+  <h6><%= pluralize(@article.errors.count, "error" )%> prevented this article from being saved </h6>
   <ul class="red-text text-darken-2">
     <% @article.errors.full_messages.each do |message| %>
       <li>
