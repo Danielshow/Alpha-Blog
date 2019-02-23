@@ -1,11 +1,19 @@
 <h3> All Articles </h3>
-<ul>
-  <% @articles.each do |article| %>
-    <li>
-      <h3><%= link_to article.title, article_path(article) %></h3>
-      <p>created <%= time_ago_in_words(article.created_at) %> ago</p>
 
-      <p><%= article.description%></p>
-    </li>
+  <% @articles.each do |article| %>
+    <div class="col s12 m12">
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+      
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4"><%= link_to article.title, article_path(article) %><i class="material-icons right">more_vert</i></span>
+          <p>created <%= time_ago_in_words(article.created_at) %> ago</p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4"><%= link_to article.title, article_path(article) %><i class="material-icons right">close</i></span>
+          <p><%= article.description.slice(0, 20)%></p>
+        </div>
+    </div>
   <%end%>
-</ul>
+
