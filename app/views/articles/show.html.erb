@@ -16,8 +16,12 @@
         <p><%= @article.description%></p>
       </div>
       <div class="card-action">
-        <%= link_to 'Edit article', edit_article_path(@article)%>
-        <%= link_to 'Delete article', article_path(@article), method: :delete, data: { confirm: "Are you sure?" }%>
+        <%if logged_in? && current_user == @article.user%>
+          <%= link_to 'Edit article', edit_article_path(@article)%>
+          <%= link_to 'Delete article', article_path(@article), method: :delete, data: { confirm: "Are you sure?" }%>
+        <%else%>
+          <p>Thanks for reading</p>
+        <%end%>
       </div>
     </div>
   </div>

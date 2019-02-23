@@ -3,7 +3,11 @@
     <br>
     <br>
     <h4>A HOME FOR READERS</h4>
-    <%= link_to 'Signup', signup_path, class: "waves-effect waves-light btn pink" %>
+    <%if logged_in? %>
+      <%= link_to 'Start Writing', new_article_path, class: "waves-effect waves-light btn pink" %>
+    <%else%>
+      <%= link_to 'Signup', signup_path, class: "waves-effect waves-light btn pink" %>
+    <%end%>
     <i class="material-icons">face</i>
     <%= link_to 'All Articles', articles_path, class: "waves-effect waves-light btn pink" %>
     <br>
