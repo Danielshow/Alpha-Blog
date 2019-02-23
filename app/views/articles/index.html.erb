@@ -8,7 +8,8 @@
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4"><%= link_to article.title, article_path(article) %><i class="material-icons right">more_vert</i></span>
-          <p>created <%= time_ago_in_words(article.created_at) %> ago</p>
+          <p>created: <%= time_ago_in_words(article.created_at) %> ago | last updated: <%= time_ago_in_words(article.updated_at) %> ago</p>
+          <p>Article created by <%= article.user.username.upcase%></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4"><%= link_to article.title, article_path(article) %><i class="material-icons right">close</i></span>

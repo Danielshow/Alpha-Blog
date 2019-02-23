@@ -3,7 +3,11 @@
     <div class="card grey lighten-3">
       <div class="card-content black-text">
         <span class="card-title center-align"><%= @article.title%></span>
-        <small>created <%= time_ago_in_words(@article.created_at)%> ago</small>
+        <small>created <%= time_ago_in_words(@article.created_at)%> ago | last updated: <%= time_ago_in_words(@article.updated_at)%>
+          ago
+        </small>
+        <br>
+        <small>Article created by <%= @article.user.username%></small>
               <br>
               <br>
         <p><%= @article.description%></p>
