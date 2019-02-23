@@ -18,8 +18,24 @@ main {
   min-height: 50vh;
 }
 
+#text-area {height: 5rem;}
+
 textarea.materialize-textarea{height: 20rem;}
+
+
 
 .footer {
   bottom: 0;
+}
+
+.card-user {
+  width: 20%;
+  height: auto;
+  margin-left: 20px;
+}
+
+.users {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
