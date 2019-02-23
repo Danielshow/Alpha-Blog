@@ -1,12 +1,18 @@
-<h3>Article</h3>
-<p>created <%= time_ago_in_words(@article.created_at)%> ago</p>
-
-<h3><%= @article.title%></h3>
-<p><%= @article.description%></p>
-
-<p><%= link_to 'Edit article', edit_article_path(@article)%>
-
-| <%= link_to 'Delete article', article_path(@article), method: :delete, data: { confirm: "Are you sure?" }%>
-</p>
-<br>
-<%= link_to 'Back to articles', articles_path%>
+<div class="row z-depth-3">
+  <div class="col s12 m12">
+    <div class="card grey lighten-3">
+      <div class="card-content black-text">
+        <span class="card-title center-align"><%= @article.title%></span>
+        <small>created <%= time_ago_in_words(@article.created_at)%> ago</small>
+              <br>
+              <br>
+        <p><%= @article.description%></p>
+      </div>
+      <div class="card-action">
+        <%= link_to 'Edit article', edit_article_path(@article)%>
+        <%= link_to 'Delete article', article_path(@article), method: :delete, data: { confirm: "Are you sure?" }%>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to 'Back to articles', articles_path, class: "btn pink lighten-2"%>
