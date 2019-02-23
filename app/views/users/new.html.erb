@@ -1,20 +1,2 @@
 <h4>Register</h4>
-<%= render 'shared/error', obj: @user%>
-<%= form_for @user do |f| %>
-  <p>
-    <%= f.label :email%><br>
-    <%= f.email_field :email, placeholder: 'fake-email@email.com'%>  
-  </p>
-  <p>
-    <%= f.label :username%><br>
-    <%= f.text_field :username, placeholder: 'username'%>  
-  </p>
-  <p>
-    <%= f.label :password%><br>
-    <%= f.password_field :password%>  
-  </p>
-
-  <%= f.submit 'Signup', class: "btn pink"%>
-  <br>
-  <br>
-<%end%>
+<%= render 'form', text: 'Create Account'%>
