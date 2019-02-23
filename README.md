@@ -1,4 +1,6 @@
 ## Alpha-Blog
+
+[Alpha-blog]( https://alpha-bloog.herokuapp.com/)
 Created with Ruby on Rails
 
 Materialize for styling
