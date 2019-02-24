@@ -1,0 +1,10 @@
+<h1>All Catgories</h2>
+<%if logged_in? and current_user.admin?%>
+  <%= link_to 'Create New Category', new_category_path, class: 'btn pink waves-effect waves-light'%>
+<%end%>
+<ul>
+  <% @categories.each do |category| %>
+    <li><h4><%= link_to category.name, category_path(category) %><h4></li>
+  <%end%> 
+</ul>
+<%= will_paginate @categories%>

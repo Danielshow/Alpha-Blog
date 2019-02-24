@@ -1,0 +1,9 @@
+<%= render 'shared/error', obj: @category%>
+<%= form_for @category do |f| %>
+  <p>
+    <%= f.label :name%><br>
+    <%= f.text_field :name%>  
+  </p>
+
+  <%= f.submit 'Submit', class: "btn pink waves-effect waves-light"%>
+<%end%>

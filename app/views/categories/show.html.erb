@@ -1,0 +1,9 @@
+<h3><%= @category.name %></h3>
+<p>created <%= time_ago_in_words(@category.created_at)%> ago</p>
+<% if logged_in? && current_user.admin?%>
+  <p><%= link_to 'DELETE', category_path(@category), method: :delete, data: {confirm: 'Are you sure'}, 
+  class: 'btn pink waves-effect waves-light'%>
+  <%= link_to 'Edit', edit_category_path(@category), class: 'btn pink waves-effect waves-light'%> </p>
+<%end%>
+
+<%= link_to 'Back to categories', categories_path, class: 'btn pink waves-effect waves-light'%>
